@@ -45,14 +45,14 @@ c) Year of Manufacture and Minimum Price
 Please enter an option: 
 ```
 - The processing for each option is done by a dedicated filtering method.
-  - Method to filter cars by brand (filterCarsAndSaveByBrand)
+  - Method to filter cars by brand (`filterCarsAndSaveByBrand(Car[] cars, String brand)`)
     - This method takes Car array and brand as input parameters.
     - New empty ArrayList named `filteredCars` is created to add the filtered results.
     - If any Car object's make matches with given brand it is added to the filteredCars.
     - If no matches found, gives no cars found message.
     - Finally, the results are saved to a file called `FilteredCarsByBrand.txt`using a seperate method which is explained later. The file is saved in the same directory where you have the code.
 
-  - Method to filter cars by Model and Minimum Years in Use (filterCarsAndSaveByModelAndYearsInUse)
+  - Method to filter cars by Model and Minimum Years in Use (`filterCarsAndSaveByModelAndYearsInUse(Car[] cars, String model, int yearsInUse)`)
     - This method takes Car array, model and years in use as input parameteres.
     - New empty ArrayList named `filteredCars` is created to add the filtered results.
     - Current year is specified as 2023 for comparison later.
@@ -60,21 +60,22 @@ Please enter an option:
     - If no matches found, gives no cars found message.
     - Finally, the results are saved to a file called `FilteredCarsByModelAndYearsInUse.txt` using a seperate method which is explained later. The file is saved in the same directory where you have the code.
    
-  - Method to filter cars by year of manufacture and the price (filterCarsAndSaveByYearAndPrice)
+  - Method to filter cars by year of manufacture and the price (`filterCarsAndSaveByYearAndPrice(Car[] cars, int year, double givenPrice)`)
     - This method takes Car array, year and price as input parameteres.
     - New empty ArrayList named `filteredCars` is created to add the filtered results.
     - If any car object matches with given year of manufacture and has a price greater than user entered price, it is added to the filteredCars array.
     - If no matches found, gives no cars found message.
     - Finally, the results are saved to a file called `FilteredCarsByYearAndPrice.txt` using a seperate method which is explained later. The file is saved in the same directory where you have the code.
    
-  - Method to save result to a text file (saveCarsToFile)
+  - Method to save result to a text file (`saveCarsToFile(List<Car> cars, String fileName)`)
     - This method takes List of cars and file name as input parameteres.
     - It will try to iterate through the list of cars and write the car object's details into a text file.
     - The text file is saved into the same directory as where you have the code.
     - If saved successfully, it will display a message with number of cars saved and file name. 
 
 ## Output
-Option 1: Input Option: a, Input brand: toyota --> 02 cars macthed with the condition and result is saved to `FilteredCarsByBrand.txt` file.
+Sample outputs for each sample inputs are described below. <br />
+1) Input Option: a, Input brand: toyota --> Result: 02 cars macthed with the condition and result is saved to `FilteredCarsByBrand.txt` file.
 ```
 Select filtering criteria from below options (Select options a, b or c): 
 a) Brand
@@ -90,7 +91,7 @@ Car{Id=2, Make=Toyota, Model=Corolla, Year=1966, Color=Silver, Price=20000.0, Re
 Car{Id=3, Make=Toyota, Model=Prius, Year=1997, Color=White, Price=22000.0, Registration Number=GHI789}
 ```
 
-Option 2: Input Option: b, Input model: yaris, Input minimum years in use: 10 --> No cars are matched with both conditions. No file is saved.
+2) Input Option: b, Input model: yaris, Input minimum years in use: 10 --> Result: No cars are matched with both conditions. No file is saved.
 ```
 Select filtering criteria from below options (Select options a, b or c): 
 a) Brand
@@ -102,7 +103,7 @@ Enter the Minimum Years in Use: 10
 Sorry, No cars found for model yaris and in use for more than 10 years.
 ```
 
-Option 3: Input Option: c, Input year of manufacture: 2000, Input minimum price = 10000 --> 01 car is matched with both conditions and result is saved to `FilteredCarsByYearAndPrice.txt` file.
+3) Input Option: c, Input year of manufacture: 2000, Input minimum price = 10000 --> Result: 01 car is matched with both conditions and result is saved to `FilteredCarsByYearAndPrice.txt` file.
 ```
 Select filtering criteria from below options (Select options a, b or c): 
 a) Brand
