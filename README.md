@@ -50,7 +50,7 @@ Please enter an option:
     - New empty ArrayList named `filteredCars` is created to add the filtered results.
     - If any Car object's make matches with given brand it is added to the filteredCars.
     - If no matches found, gives no cars found message.
-    - Finally, the results are saved to a file called `FilteredCarsByBrand.txt`using a seperate method which is explained later. The file is saved in the same directory where you have the code.
+    - Finally, the results are saved to a file called `FilteredCarsByBrand.txt`using a seperate method (`saveCarsToFile`) which is explained later. The file is saved in the same directory where you have the code. File saved path also will be printed for easy reference.
 
   - Method to filter cars by Model and Minimum Years in Use (`filterCarsAndSaveByModelAndYearsInUse(Car[] cars, String model, int yearsInUse)`)
     - This method takes Car array, model and years in use as input parameteres.
@@ -58,20 +58,20 @@ Please enter an option:
     - Current year is specified as 2023 for comparison later.
     - If any Car object matches with given model and year of manufacture greater than the user entered number of years, it is added to the filteredCars array.
     - If no matches found, gives no cars found message.
-    - Finally, the results are saved to a file called `FilteredCarsByModelAndYearsInUse.txt` using a seperate method which is explained later. The file is saved in the same directory where you have the code.
+    - Finally, the results are saved to a file called `FilteredCarsByModelAndYearsInUse.txt` using a seperate method (`saveCarsToFile`) which is explained later. The file is saved in the same directory where you have the code. File saved path also will be printed for easy reference.
    
   - Method to filter cars by year of manufacture and the price (`filterCarsAndSaveByYearAndPrice(Car[] cars, int year, double givenPrice)`)
     - This method takes Car array, year and price as input parameteres.
     - New empty ArrayList named `filteredCars` is created to add the filtered results.
     - If any car object matches with given year of manufacture and has a price greater than user entered price, it is added to the filteredCars array.
     - If no matches found, gives no cars found message.
-    - Finally, the results are saved to a file called `FilteredCarsByYearAndPrice.txt` using a seperate method which is explained later. The file is saved in the same directory where you have the code.
+    - Finally, the results are saved to a file called `FilteredCarsByYearAndPrice.txt` using a seperate method (`saveCarsToFile`) which is explained later. The file is saved in the same directory where you have the code. File saved path also will be printed for easy reference.
    
   - Method to save result to a text file (`saveCarsToFile(List<Car> cars, String fileName)`)
-    - This method takes List of cars and file name as input parameteres.
+    - This method is used to write the results into a text file and save. It takes List of cars and file name as input parameteres.
     - It will try to iterate through the list of cars and write the car object's details into a text file.
     - The text file is saved into the same directory as where you have the code.
-    - If saved successfully, it will display a message with number of cars saved and file name. 
+    - If saved successfully, it will display a message with number of cars saved, file name and the file saved path.
 
 # Output
 Sample outputs for each sample inputs are described below. <br />
@@ -84,6 +84,7 @@ c) Year of Manufacture and Minimum Price
 Please enter an option: a
 Enter the Brand to Filter: toyota
 Saved 2 cars to FilteredCarsByBrand.txt
+File Saved Path: C:\Users\<username>\git\homework-assignment-2\homework-assignment-2\FilteredCarsByBrand.txt
 ```
 The `FilteredCarsByBrand.txt` file contents are as below;
 ```
@@ -113,6 +114,7 @@ Please enter an option: c
 Enter the Year of Manufacture to Filter: 2000
 Enter the Minimum Price: 10000
 Saved 1 cars to FilteredCarsByYearAndPrice.txt
+File Saved Path: C:\Users\<username>\git\homework-assignment-2\homework-assignment-2\FilteredCarsByYearAndPrice.txt
 ```
 The `FilteredCarsByYearAndPrice.txt` file contents are as below;
 ```
