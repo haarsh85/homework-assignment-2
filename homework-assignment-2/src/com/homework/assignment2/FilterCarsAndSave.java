@@ -1,5 +1,6 @@
 package com.homework.assignment2;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -126,7 +127,8 @@ public class FilterCarsAndSave {
 				writer.write(car.toString()+"\n");
 			}
 			writer.close();
-			System.out.println("Saved " + cars.size() + " cars to " + fileName);	
+			System.out.println("Saved " + cars.size() + " cars to " + fileName);
+			System.out.println("File Saved Path: " + new File(fileName).getAbsolutePath() );	
 		} catch (IOException e) {
 			System.err.println("Error saving cars to " + fileName);
 			e.printStackTrace();
