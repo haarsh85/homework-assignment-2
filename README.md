@@ -73,7 +73,7 @@ Please enter an option:
     - The text file is saved into the same directory as where you have the code.
     - If saved successfully, it will display a message with number of cars saved and file name. 
 
-## Output
+# Output
 Sample outputs for each sample inputs are described below. <br />
 1) Input Option: a, Input brand: toyota --> Result: 02 cars macthed with the condition and result is saved to `FilteredCarsByBrand.txt` file.
 ```
