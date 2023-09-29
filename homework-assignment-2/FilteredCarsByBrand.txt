@@ -1,1 +1,0 @@
-Car{Id=4, Make=Honda, Model=Civic, Year=2000, Color=Red, Price=30000.0, Registration Number=JKL321}
